@@ -77,7 +77,7 @@ public class DeleteSimNG {
 				.getText();
 
 		// check if the IMEI and IMSI same as the input
-		if (IMEI.equals("17217250006") & IMSI.equals("1721725000610")) {
+		if (IMEI.equals("172172500006") & IMSI.equals("172172500006")) {
 			System.out.println("Fail");
 			throw new AssertionError("Condition not true. Test failed.");
 		} else {
