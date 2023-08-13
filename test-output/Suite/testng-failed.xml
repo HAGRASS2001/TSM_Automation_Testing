@@ -3,6 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="2">
   <test thread-count="5" name="Test(failed)" verbose="2">
     <classes>
+      <class name="Sim.UpdateSimNG">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="UpdateSimNG"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- Sim.UpdateSimNG -->
       <class name="Sim.CreateNewSimNG">
         <methods>
           <include name="afterMethod"/>

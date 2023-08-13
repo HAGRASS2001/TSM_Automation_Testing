@@ -67,7 +67,7 @@ public class UpdateSimNG {
 		proxy.setSocksProxy("127.0.0.1:8080");
 		proxy.setSocksVersion(5);
 		options.setProxy(proxy);
-		options.setHeadless(true);
+		//options.setHeadless(true);
 		driver = new FirefoxDriver(options);
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -81,7 +81,7 @@ public class UpdateSimNG {
 		String IMSI = driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[15]")).getText();
 		
 		//check if the IMEI and IMSI same as the input
-		if(IMEI.equals("17217250006") & IMSI.equals("1721725000610")) {
+		if(IMEI.equals("172172500006") & IMSI.equals("17217250000610")) {
 			System.out.println("Pass");
 		}else {
 			System.out.println("Fail");
