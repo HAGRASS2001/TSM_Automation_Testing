@@ -39,7 +39,7 @@ public class UpdateSimPlanNG {
 		// clear the input
 		driver.findElement(By.xpath("//*[@id=\"sim_plan-Name\"]")).clear();
 		// Enter name value
-		driver.findElement(By.xpath("//*[@id=\"sim_plan-Name\"]")).sendKeys("VodaTest");
+		driver.findElement(By.xpath("//*[@id=\"sim_plan-Name\"]")).sendKeys("TestVoda2");
 
 		// click on save
 		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/button"))
@@ -74,7 +74,7 @@ public class UpdateSimPlanNG {
 				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[2]"))
 				.getText();
 
-		if (SimPlanName.equals("VodaTest")) {
+		if (SimPlanName.equals("TestVoda2")) {
 			System.out.println("Pass");
 		} else {
 			System.out.println("Fail");

@@ -3,9 +3,9 @@
 <suite name="Suite" verbose="2">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="Sim.CreateNewSimNG"/>
-      <class name="Sim.UpdateSimNG"/>   
-      <class name="Sim.DeleteSimNG"/>
+      <class name="SimPlan.CreateNewSimPlan"/>
+      <class name="SimPlan.UpdateSimPlanNG"/>   
+      <class name="SimPlan.DeleteSimPlanNG"/>
     </classes>
   </test> <!-- Test -->
     <!-- Add the listener for the custom reporter -->
