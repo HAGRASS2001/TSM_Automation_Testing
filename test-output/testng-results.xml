@@ -1,60 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-13T10:03:21 EET" name="Suite" finished-at="2023-08-13T10:04:58 EET" duration-ms="96183">
+  <suite started-at="2023-08-13T15:53:54 EET" name="Default suite" finished-at="2023-08-13T15:54:29 EET" duration-ms="34741">
     <groups>
     </groups>
-    <test started-at="2023-08-13T10:03:21 EET" name="Test" finished-at="2023-08-13T10:04:58 EET" duration-ms="96183">
-      <class name="Sim.DeleteSimNG">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Sim.DeleteSimNG@7f77e91b]" started-at="2023-08-13T10:04:30 EET" name="beforeMethod" finished-at="2023-08-13T10:04:32 EET" duration-ms="1775" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="DeleteSimNG()[pri:0, instance:Sim.DeleteSimNG@7f77e91b]" started-at="2023-08-13T10:04:32 EET" name="DeleteSimNG" finished-at="2023-08-13T10:04:54 EET" duration-ms="22281" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DeleteSimNG -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Sim.DeleteSimNG@7f77e91b]" started-at="2023-08-13T10:04:54 EET" name="afterMethod" finished-at="2023-08-13T10:04:58 EET" duration-ms="3292" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=DeleteSimNG status=SUCCESS method=DeleteSimNG.DeleteSimNG()[pri:0, instance:Sim.DeleteSimNG@7f77e91b] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- Sim.DeleteSimNG -->
+    <test started-at="2023-08-13T15:53:54 EET" name="Default test" finished-at="2023-08-13T15:54:29 EET" duration-ms="34741">
       <class name="Sim.CreateNewSimNG">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Sim.CreateNewSimNG@23a5fd2]" started-at="2023-08-13T10:03:21 EET" name="beforeMethod" finished-at="2023-08-13T10:03:24 EET" duration-ms="2701" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Sim.CreateNewSimNG@3c407114]" started-at="2023-08-13T15:53:54 EET" name="beforeMethod" finished-at="2023-08-13T15:53:59 EET" duration-ms="4836" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="CreateNewSimNG()[pri:0, instance:Sim.CreateNewSimNG@23a5fd2]" started-at="2023-08-13T10:03:24 EET" name="CreateNewSimNG" finished-at="2023-08-13T10:04:04 EET" duration-ms="40093" status="PASS">
+        <test-method signature="CreateNewSimNG()[pri:0, instance:Sim.CreateNewSimNG@3c407114]" started-at="2023-08-13T15:53:59 EET" name="CreateNewSimNG" finished-at="2023-08-13T15:54:26 EET" duration-ms="27350" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreateNewSimNG -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Sim.CreateNewSimNG@23a5fd2]" started-at="2023-08-13T10:04:04 EET" name="afterMethod" finished-at="2023-08-13T10:04:07 EET" duration-ms="3045" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Sim.CreateNewSimNG@3c407114]" started-at="2023-08-13T15:54:26 EET" name="afterMethod" finished-at="2023-08-13T15:54:29 EET" duration-ms="2518" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Condition not true. Test failed create.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Condition not true. Test failed create.
+at Sim.CreateNewSimNG.afterMethod(CreateNewSimNG.java:154)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:676)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:660)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- Sim.CreateNewSimNG -->
-      <class name="Sim.UpdateSimNG">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Sim.UpdateSimNG@1a38c59b]" started-at="2023-08-13T10:04:07 EET" name="beforeMethod" finished-at="2023-08-13T10:04:09 EET" duration-ms="2034" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="UpdateSimNG()[pri:0, instance:Sim.UpdateSimNG@1a38c59b]" started-at="2023-08-13T10:04:09 EET" name="UpdateSimNG" finished-at="2023-08-13T10:04:28 EET" duration-ms="18243" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- UpdateSimNG -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Sim.UpdateSimNG@1a38c59b]" started-at="2023-08-13T10:04:28 EET" name="afterMethod" finished-at="2023-08-13T10:04:30 EET" duration-ms="2689" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- Sim.UpdateSimNG -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

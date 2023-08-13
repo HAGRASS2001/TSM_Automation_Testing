@@ -59,7 +59,7 @@ public class DeleteSimNG {
 		proxy.setSocksProxy("127.0.0.1:8080");
 		proxy.setSocksVersion(5);
 		options.setProxy(proxy);
-		//options.setHeadless(true);
+		options.setHeadless(true);
 		driver = new FirefoxDriver(options);
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -77,9 +77,9 @@ public class DeleteSimNG {
 				.getText();
 
 		// check if the IMEI and IMSI same as the input
-		if (IMEI.equals("2010309000") & IMSI.equals("201030900010")) {
+		if (IMEI.equals("908070") & IMSI.equals("90807010")) {
 			System.out.println("Fail");
-			throw new AssertionError("Condition not true. Test failed.");
+			throw new AssertionError("Condition not true. Test failed. delete");
 		} else {
 			System.out.println("Pass");
 		}
