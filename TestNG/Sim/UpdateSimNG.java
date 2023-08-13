@@ -81,7 +81,7 @@ public class UpdateSimNG {
 		String IMSI = driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[15]")).getText();
 		
 		//check if the IMEI and IMSI same as the input
-		if(IMEI.equals("20103090") & IMSI.equals("2010309010")) {
+		if(IMEI.equals("201030900") & IMSI.equals("20103090010")) {
 			System.out.println("Pass");
 		}else {
 			System.out.println("Fail");
