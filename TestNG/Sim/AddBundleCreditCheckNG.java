@@ -25,29 +25,37 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterMethod;
 
-public class CreditCheckOnlyNG {
+public class AddBundleCreditCheckNG {
 	private WebDriver driver;
 	private ObjectMapper objectMapper = new ObjectMapper();
+	private ObjectMapper objectMapper2 = new ObjectMapper();
+	private String jobname = "";
+	private String BundleBalanceFromJson = "";
+	private String json = "";
+	private String json2 = "";
+	private String BalanceFromJson = "";
 	private String Balance = "";
 	private String BundleBalance = "";
-	private String json = "";
-	private String BundleBalanceFromJson = "";
-	private String Simid = "";
-	private String balanceFromJson = "";
+	private String jobID = "";
+	private String jobID2 = "";
 	private String jobtype = "";
 	private String jobStatus = "";
 	private String JobRunningMode = "";
-	private String simID = "";
-	private String jobID = "";
+	private String jobtype2 = "";
+	private String jobStatus2 = "";
+	private String JobRunningMode2 = "";
 	private String jobid = "";
+	private String jobid2 = "";
 
 	@Test
-	public void CreditCheckOnlyNG() throws InterruptedException, JsonMappingException, JsonProcessingException {
+	public void AddBundleCreditCheckNG() throws InterruptedException, JsonMappingException, JsonProcessingException {
 		LoginNG login = new LoginNG(driver);
 
 		// update balance and bundle in sim plan 123
-		UpdatePlan123NG UpdatePlan123 = new UpdatePlan123NG(driver, 600, 500);
+		UpdatePlan123NG UpdatePlan123 = new UpdatePlan123NG(driver, 400, 300);
 		UpdatePlan123.UpdatePlan123();
+
+		Thread.sleep(2000);
 
 		// click on sim in left nav bar
 		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[1]/div[2]/div/div/div[1]/a")).click();
@@ -91,12 +99,12 @@ public class CreditCheckOnlyNG {
 		driver.findElement(By.xpath(
 				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[11]/td[20]/div/div/div/div/select"))
 				.click();
-		// select Credit Check only action
+		// select Add Bundle only + credit check action
 		driver.findElement(By.xpath(
-				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[20]/div/div/div/div/select/option[4]"))
+				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[20]/div/div/div/div/select/option[6]"))
 				.click();
 
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 
 		// click on ok popup (there is an error here)
 		driver.findElement(By.xpath("/html/body/div[4]/div/div[4]/div/button")).click();
@@ -104,8 +112,75 @@ public class CreditCheckOnlyNG {
 		// wait 1 min to see the record in sim logs
 		Thread.sleep(120000);
 
-		// click on refresh
-		driver.findElement(By.xpath("//*[@id=\"forceRefresh\"]")).click();
+		// click on sim logs
+		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[1]/div[2]/div/div/div[6]/a")).click();
+		// click on entry drop down
+		driver.findElement(By.xpath(
+				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[3]/label/select"))
+				.click();
+		// choose 100
+		driver.findElement(By.xpath(
+				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[3]/label/select/option[2]"))
+				.click();
+
+		// get job name
+		jobname = driver.findElement(By.xpath(
+				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[20]/td[2]"))
+				.getText();
+
+		// click on show data
+		driver.findElement(By.xpath(
+				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[2]/td[5]/button"))
+				.click();
+
+		// get json for bundle balance from simlog
+		json = driver.findElement(By.xpath(
+				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[2]/td[5]/div/div/div/div[2]"))
+				.findElement(By.tagName("textarea")).getAttribute("value");
+
+		JsonNode rootNode = objectMapper.readTree(json);
+		JsonNode simAfter = rootNode.get("simAfter");
+		BundleBalanceFromJson = simAfter.get("bundle_balance").asText();
+		try {
+			// click on close data
+			driver.findElement(By.xpath(
+					"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[2]/td[5]/div/div/div/div[1]/button"))
+					.click();
+			driver.findElement(By.xpath(
+					"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[2]/td[5]/div/div/div/div[1]/button"))
+					.click();
+		} catch (Exception e) {
+			System.out.println("Error: " + e.getMessage());
+		}
+		driver.findElement(By.xpath(
+				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[8]/td[5]/button"))
+				.click();
+		// get json for balance from simlog
+		json2 = driver.findElement(By.xpath(
+				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[8]/td[5]/div/div/div/div[2]"))
+				.findElement(By.tagName("textarea")).getAttribute("value");
+
+		JsonNode rootNode2 = objectMapper2.readTree(json2);
+		JsonNode simAfter2 = rootNode2.get("simAfter");
+		BalanceFromJson = simAfter2.get("balance").asText();
+
+		// click on close data
+		driver.findElement(By.xpath(
+				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[8]/td[5]/div/div/div/div[1]/button"))
+				.click();
+		driver.findElement(By.xpath(
+				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[8]/td[5]/div/div/div/div[1]/button"))
+				.click();
+		// driver.findElement(By.cssSelector("#dataModel-59549148 .btn")).click();
+		Thread.sleep(5000);
+		// click on sim in left nav bar
+		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[1]/div[2]/div/div/div[1]/a")).click();
+		// click on tableview
+		driver.findElement(By.xpath("//*[@id=\"dropdown-button-dark-example1\"]")).click();
+		// choose customview2
+		driver.findElement(By.xpath(
+				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/form/div[4]/div[1]/div/div/a[5]"))
+				.click();
 		// get bundle balance from table
 		BundleBalance = driver.findElement(By.xpath(
 				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[10]"))
@@ -115,33 +190,6 @@ public class CreditCheckOnlyNG {
 				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[12]"))
 				.getText();
 
-		// click on sim logs
-		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[1]/div[2]/div/div/div[6]/a")).click();
-		// click on show data
-		driver.findElement(By.xpath(
-				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[5]/button"))
-				.click();
-
-		// get json from simlog
-		json = driver.findElement(By.xpath(
-				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[2]/td[5]/div/div/div/div[2]"))
-				.findElement(By.tagName("textarea")).getAttribute("value");
-
-		JsonNode rootNode = objectMapper.readTree(json);
-
-		JsonNode simBefore = rootNode.get("simBefore");
-		balanceFromJson = simBefore.get("balance").asText();
-		Simid = simBefore.get("id").asText();
-		JsonNode simAfter = rootNode.get("simAfter");
-		BundleBalanceFromJson = simAfter.get("bundle_balance").asText();
-
-		// close the data
-		driver.findElement(By.xpath(
-				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[2]/td[5]/div/div/div/div[3]/button"))
-				.click();
-		driver.findElement(By.xpath(
-				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[2]/td[5]/div/div/div/div[3]/button"))
-				.click();
 		// job monitor
 		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[1]/div[2]/div/div/div[9]/a")).click();
 		// click on completed
@@ -161,19 +209,24 @@ public class CreditCheckOnlyNG {
 			}
 			driver.findElement(By.cssSelector("body")).click();
 			driver.findElement(By.cssSelector(".MuiMenuItem-root:nth-child(1)")).click();
-    	    driver.findElement(By.xpath("//*[@id=\"jobs-filters_order\"]")).click();
-    	    driver.findElement(By.xpath("/html/body/div[2]/div[3]/ul/li[1]")).click();
+			Thread.sleep(3000);
+			driver.findElement(By.xpath("//*[@id=\"jobs-filters_order\"]")).click();
+			driver.findElement(By.xpath("/html/body/div[2]/div[3]/ul/li[1]")).click();
 		} catch (Exception e) {
 			System.out.println("Error: " + e.getMessage());
 		}
 
-		// get the json
+		// get the json for first job
 		String jobMonitorJson = driver
 				.findElement(By.xpath("/html/body/div/div/main/div[4]/div[2]/table/tbody/tr[2]/td/div/pre")).getText();
+		JsonNode rootNode3 = objectMapper.readTree(jobMonitorJson);
+		jobID = rootNode3.get("jobId").asText();
 
-		JsonNode rootNode2 = objectMapper.readTree(jobMonitorJson);
-		jobID = rootNode2.get("jobId").asText();
-		simID = rootNode2.get("DataTypeId").asText();
+		// get the json for first job
+		String jobMonitorJson2 = driver
+				.findElement(By.xpath("/html/body/div/div/main/div[4]/div[2]/table/tbody/tr[4]/td/div/pre")).getText();
+		JsonNode rootNode4 = objectMapper.readTree(jobMonitorJson2);
+		jobID2 = rootNode4.get("jobId").asText();
 
 		// login to strapi
 		StrapiLoginNG loginST = new StrapiLoginNG(driver);
@@ -193,7 +246,7 @@ public class CreditCheckOnlyNG {
 				.findElement(By.xpath(
 						"/html/body/div[1]/div[2]/div/div/div/div/main/div[3]/div[1]/div/div/table/tbody/tr[1]/td[2]"))
 				.getText().replaceAll(",", "");
-		if (jobid.equals(jobID) & Simid.equals(simID)) {
+		if (jobid.equals(jobID)) {
 			jobtype = driver.findElement(By.xpath(
 					"/html/body/div[1]/div[2]/div/div/div/div/main/div[3]/div[1]/div/div/table/tbody/tr[1]/td[3]"))
 					.getText();
@@ -202,6 +255,21 @@ public class CreditCheckOnlyNG {
 					.getText();
 			JobRunningMode = driver.findElement(By.xpath(
 					"/html/body/div[1]/div[2]/div/div/div/div/main/div[3]/div[1]/div/div/table/tbody/tr[1]/td[5]"))
+					.getText();
+		}
+
+		jobid2 = driver.findElement(By.xpath(
+				"/html/body/div[1]/div[2]/div/div/div/div/main/div[3]/div[1]/div/div/table/tbody/tr[2]/td[2]/span"))
+				.getText().replaceAll(",", "");
+		if (jobid2.equals(jobID2)) {
+			jobtype2 = driver.findElement(By.xpath(
+					"/html/body/div[1]/div[2]/div/div/div/div/main/div[3]/div[1]/div/div/table/tbody/tr[2]/td[3]"))
+					.getText();
+			jobStatus2 = driver.findElement(By.xpath(
+					"/html/body/div[1]/div[2]/div/div/div/div/main/div[3]/div[1]/div/div/table/tbody/tr[2]/td[4]"))
+					.getText();
+			JobRunningMode2 = driver.findElement(By.xpath(
+					"/html/body/div[1]/div[2]/div/div/div/div/main/div[3]/div[1]/div/div/table/tbody/tr[2]/td[5]"))
 					.getText();
 		}
 
@@ -228,12 +296,14 @@ public class CreditCheckOnlyNG {
 
 	@AfterMethod
 	public void afterMethod() {
-		System.out.println(BundleBalance + Balance + balanceFromJson + BundleBalanceFromJson + jobtype + jobStatus
-				+ JobRunningMode + jobID + simID);
-		// check if the IMEI and IMSI same as the input
-		if (!BundleBalance.equals("400") & !Balance.equals("500") & !balanceFromJson.equals("500")
-				& !BundleBalanceFromJson.equals("400")
-				& (jobtype.equals("1") & jobStatus.equals("3") & JobRunningMode.equals("2"))) {
+		System.out.println(jobname + " " + BundleBalance + " " + Balance + " " + BalanceFromJson + " "
+				+ BundleBalanceFromJson + " \n " + jobtype + " " + jobStatus + " " + JobRunningMode + " " + jobid + " "
+				+ jobID + " \n " + jobtype2 + " " + jobStatus2 + " " + JobRunningMode2 + " " + jobid2 + " " + jobID2);
+
+		if (BundleBalance.equals("450") & Balance.equals("350") & BalanceFromJson.equals("350")
+				& BundleBalanceFromJson.equals("450")
+				& (jobtype.equals("1") & jobStatus.equals("3") & JobRunningMode.equals("2"))
+				& (jobtype2.equals("12") & jobStatus2.equals("3") & JobRunningMode2.equals("2"))) {
 			System.out.println("Pass");
 		} else {
 			System.out.println("Fail");

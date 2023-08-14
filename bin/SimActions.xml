@@ -6,6 +6,7 @@
       <class name="Sim.SendUSSDNG"/>
       <class name="Sim.CreditCheck_SimPlanNG"/>   
       <class name="Sim.CreditCheckOnlyNG"/>
+      <class name="Sim.AddBundleCreditCheckNG"/>
     </classes>
   </test> <!-- Test -->
     <!-- Add the listener for the custom reporter -->
