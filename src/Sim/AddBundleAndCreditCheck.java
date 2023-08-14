@@ -2,6 +2,7 @@ package Sim;
 
 import java.util.concurrent.TimeUnit;
 
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
