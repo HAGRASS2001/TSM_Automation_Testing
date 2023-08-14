@@ -26,11 +26,11 @@ public class SendUSSDNG {
 		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[1]/div[2]/div/div/div[1]/a")).click();
 		// click on action DropDown on specific record
 		driver.findElement(By.xpath(
-				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[21]/div/div/div/div/select"))
+				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[20]/div/div/div/div/select"))
 				.click();
 		// select send USSD action
 		driver.findElement(By.xpath(
-				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[21]/div/div/div/div/select/option[2]"))
+				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[20]/div/div/div/div/select/option[2]"))
 				.click();
 
 		// click on send USSD textarea
