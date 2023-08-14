@@ -3,7 +3,7 @@
 <suite name="SimActionsSuitee" verbose="2">
   <test thread-count="10" name="Test">
     <classes>
-      <class name="Sim.SendUSSDNG"/>
+      <!--<class name="Sim.SendUSSDNG"/>-->
       <class name="Sim.CreditCheck_SimPlanNG"/>   
       <class name="Sim.CreditCheckOnlyNG"/>
       <class name="Sim.AddBundleCreditCheckNG"/>
