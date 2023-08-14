@@ -68,7 +68,7 @@ public class DeleteRoutingNG {
 				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[4]"))
 				.getText();
 
-		if (Prefix.equals("test201101") & Description.equals("TestDesc")) {
+		if (Prefix.equals("test2011011") & Description.equals("TestDesc")) {
 			System.out.println("Fail");
 			throw new AssertionError("Condition not true. Test failed.");
 		} else {

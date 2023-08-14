@@ -69,7 +69,7 @@ public class DeleteSimRackNG {
 				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[4]"))
 				.getText();
 
-		if (IP.equals("192.19.20.11") & Name.equals("NPA")) {
+		if (IP.equals("192.19.20.11111") & Name.equals("NPA")) {
 			System.out.println("Fail");
 			throw new AssertionError("Condition not true. Test failed.");
 		} else {

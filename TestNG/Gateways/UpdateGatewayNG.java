@@ -37,7 +37,7 @@ public class UpdateGatewayNG {
 		// clear old value
 		driver.findElement(By.xpath("//*[@id=\"gateways-ip\"]")).clear();
 		// enter new value
-		driver.findElement(By.xpath("//*[@id=\"gateways-ip\"]")).sendKeys("198.100.10.10");
+		driver.findElement(By.xpath("//*[@id=\"gateways-ip\"]")).sendKeys("198.100.100.111");
 		// click save
 		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/button"))
 				.click();
@@ -71,7 +71,7 @@ public class UpdateGatewayNG {
 				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[2]"))
 				.getText();
 
-		if (IP.equals("198.100.10.10")) {
+		if (IP.equals("198.100.100.111")) {
 			System.out.println("Pass");
 		} else {
 			System.out.println("Fail");
