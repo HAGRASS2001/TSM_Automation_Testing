@@ -58,9 +58,9 @@ public class DeleteGatewayNG {
 
 		if(IP.equals("198.100.100.111") & SecondaryIP.equals("192.19.200.220")) {
 			System.out.println("Fail");
+			throw new AssertionError("Condition not true. Test failed.");
 		}else {
 			System.out.println("Pass");
-			throw new AssertionError("Condition not true. Test failed.");
 		}
   }
 
