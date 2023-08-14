@@ -5,7 +5,7 @@
     <classes>
       <class name="Sim.SendUSSDNG"/>
       <class name="Sim.CreditCheck_SimPlanNG"/>   
-      <class name="Sim.DeleteGatewayNG"/>
+      <class name="Sim.CreditCheckOnlyNG"/>
     </classes>
   </test> <!-- Test -->
     <!-- Add the listener for the custom reporter -->
