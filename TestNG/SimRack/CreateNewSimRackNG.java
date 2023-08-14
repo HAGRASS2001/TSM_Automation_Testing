@@ -32,7 +32,7 @@ public class CreateNewSimRackNG {
 		// click on IP on input
 		driver.findElement(By.xpath("//*[@id=\"sim-racks-ip\"]")).click();
 		// enter the Ip value
-		driver.findElement(By.xpath("//*[@id=\"sim-racks-ip\"]")).sendKeys("192.19.20.1");
+		driver.findElement(By.xpath("//*[@id=\"sim-racks-ip\"]")).sendKeys("192.19.20.11");
 
 		// click on Name on input
 		driver.findElement(By.xpath("//*[@id=\"sim-racks-name\"]")).click();
@@ -79,7 +79,7 @@ public class CreateNewSimRackNG {
 				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[4]"))
 				.getText();
 
-		if (IP.equals("192.19.20.1") & Name.equals("NPA")) {
+		if (IP.equals("192.19.20.11") & Name.equals("NPA")) {
 			System.out.println("Pass");
 		} else {
 			System.out.println("Fail");

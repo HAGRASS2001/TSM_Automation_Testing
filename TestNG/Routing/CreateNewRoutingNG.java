@@ -31,7 +31,7 @@ public class CreateNewRoutingNG {
 		// select Prefix input
 		driver.findElement(By.xpath("//*[@id=\"routings-prefix\"]")).click();
 		// enter the Prefix value
-		driver.findElement(By.xpath("//*[@id=\"routings-prefix\"]")).sendKeys("test201");
+		driver.findElement(By.xpath("//*[@id=\"routings-prefix\"]")).sendKeys("test20110");
 		// select Description input
 		driver.findElement(By.xpath("//*[@id=\"routings-description\"]")).click();
 		// enter the Description value
@@ -80,7 +80,7 @@ public class CreateNewRoutingNG {
 				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[4]"))
 				.getText();
 
-		if (Prefix.equals("test201") & Description.equals("TestDesc")) {
+		if (Prefix.equals("test20110") & Description.equals("TestDesc")) {
 			System.out.println("Pass");
 		} else {
 			System.out.println("Fail");

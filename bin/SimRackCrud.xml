@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="RoutingSuite" verbose="2">
+<suite name="SimRackSuite" verbose="2">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="Routing.CreateNewRoutingNG"/>
-      <class name="Routing.UpdateRoutingNG"/>   
-      <class name="Routing.DeleteRoutingNG"/>
+      <class name="SimRack.CreateNewSimRackNG"/>
+      <class name="SimRack.UpdateSimRackNG"/>   
+      <class name="SimRack.DeleteSimRackNG"/>
     </classes>
   </test> <!-- Test -->
     <!-- Add the listener for the custom reporter -->
