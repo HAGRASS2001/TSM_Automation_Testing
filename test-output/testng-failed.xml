@@ -1,29 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="2">
-  <test thread-count="5" name="Test(failed)" verbose="2">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Sim.UpdateSimNG">
+      <class name="Sim.SendUSSDNG">
         <methods>
           <include name="beforeMethod"/>
-          <include name="UpdateSimNG"/>
+          <include name="SendUSSDNG"/>
           <include name="afterMethod"/>
         </methods>
-      </class> <!-- Sim.UpdateSimNG -->
-      <class name="Sim.CreateNewSimNG">
-        <methods>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="CreateNewSimNG"/>
-        </methods>
-      </class> <!-- Sim.CreateNewSimNG -->
-      <class name="Sim.DeleteSimNG">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="afterMethod"/>
-          <include name="DeleteSimNG"/>
-        </methods>
-      </class> <!-- Sim.DeleteSimNG -->
+      </class> <!-- Sim.SendUSSDNG -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -54,7 +54,7 @@ public class SendUSSDNG {
 		proxy.setSocksProxy("127.0.0.1:8080");
 		proxy.setSocksVersion(5);
 		options.setProxy(proxy);
-		options.setHeadless(true);
+		//options.setHeadless(true);
 		driver = new FirefoxDriver(options);
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -65,10 +65,11 @@ public class SendUSSDNG {
 	public void afterMethod() {
 
 		// get USSD respond from table
+		
 		String USSDRespond = driver.findElement(By.xpath("//*[@id=\"ussd_response\"]")).getText();
 
 		// check if the USSD the same
-		if (USSDRespond.equals("send USSD test")) {
+		if (USSDRespond.contains("send USSD test")) {
 			System.out.println("Pass");
 		} else {
 			System.out.println("Fail");

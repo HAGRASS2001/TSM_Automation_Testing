@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Routing.DeleteRoutingNG">
+      <class name="Sim.SendUSSDNG">
         <methods>
-          <include name="DeleteRoutingNG"/>
-          <include name="afterMethod"/>
           <include name="beforeMethod"/>
+          <include name="SendUSSDNG"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- Routing.DeleteRoutingNG -->
+      </class> <!-- Sim.SendUSSDNG -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
