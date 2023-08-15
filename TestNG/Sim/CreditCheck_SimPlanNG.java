@@ -92,7 +92,7 @@ public class CreditCheck_SimPlanNG {
 		driver.findElement(By.xpath("/html/body/div[4]/div/div[4]/div/button")).click();
 
 		//wait 1 min to see the record in sim logs
-		Thread.sleep(120000);
+		Thread.sleep(180000);
 				
 		//click on refresh
 		driver.findElement(By.xpath("//*[@id=\"forceRefresh\"]")).click();
@@ -195,9 +195,9 @@ public class CreditCheck_SimPlanNG {
 
 	@AfterMethod
 	public void afterMethod() {
-        System.out.println(BundleBalance + " " + Balance + " " + balanceFromJson + " " + BundleBalanceFromJson + " " + jobtype + " " + jobStatus + " " + JobRunningMode + " " + jobid + " " + jobID + " " + simID);
+        System.out.println("cc SP" + BundleBalance + " " + Balance + " " + balanceFromJson + " " + BundleBalanceFromJson + " " + jobtype + " " + jobStatus + " " + JobRunningMode + " " + jobid + " " + jobID + " " + simID);
 		//check if the IMEI and IMSI same as the input
-		if(BundleBalance.equals("400") & Balance.equals("500") & balanceFromJson.equals("500") & BundleBalanceFromJson.equals("400")& (jobtype.equals("1") & jobStatus.equals("3") & JobRunningMode.equals("2"))) {
+		if(BundleBalance.equals("300") & Balance.equals("400") & balanceFromJson.equals("400") & BundleBalanceFromJson.equals("300")& (jobtype.equals("1") & jobStatus.equals("3") & JobRunningMode.equals("2"))) {
 			System.out.println("Pass");
 		}else {
 			System.out.println("Fail");

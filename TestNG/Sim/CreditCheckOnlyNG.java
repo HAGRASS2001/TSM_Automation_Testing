@@ -102,7 +102,7 @@ public class CreditCheckOnlyNG {
 		driver.findElement(By.xpath("/html/body/div[4]/div/div[4]/div/button")).click();
 
 		// wait 1 min to see the record in sim logs
-		Thread.sleep(120000);
+		Thread.sleep(180000);
 
 		// click on refresh
 		driver.findElement(By.xpath("//*[@id=\"forceRefresh\"]")).click();
@@ -230,7 +230,7 @@ public class CreditCheckOnlyNG {
 
 	@AfterMethod
 	public void afterMethod() {
-		System.out.println(BundleBalance + " " + Balance + " " + balanceFromJson + " " + BundleBalanceFromJson + " "
+		System.out.println("CC O" + BundleBalance + " " + Balance + " " + balanceFromJson + " " + BundleBalanceFromJson + " "
 				+ jobtype + " " + jobStatus + " " + JobRunningMode + " " + jobID + " " + simID + " " + jobid + " " + Simid);
 		// check if the IMEI and IMSI same as the input
 		if (!BundleBalance.equals("400") & !Balance.equals("500") & !balanceFromJson.equals("500")

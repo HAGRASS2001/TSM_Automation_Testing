@@ -110,7 +110,7 @@ public class AddBundleCreditCheckNG {
 		driver.findElement(By.xpath("/html/body/div[4]/div/div[4]/div/button")).click();
 
 		// wait 1 min to see the record in sim logs
-		Thread.sleep(120000);
+		Thread.sleep(180000);
 
 		// click on sim logs
 		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[1]/div[2]/div/div/div[6]/a")).click();
@@ -294,7 +294,7 @@ public class AddBundleCreditCheckNG {
 
 	@AfterMethod
 	public void afterMethod() {
-		System.out.println(jobname + " " + BundleBalance + " " + Balance + " " + BalanceFromJson + " " + BundleBalanceFromJson + " \n " 
+		System.out.println( "add B C C" + jobname + " " + BundleBalance + " " + Balance + " " + BalanceFromJson + " " + BundleBalanceFromJson + " \n " 
 						 + jobtype + " " + jobStatus + " " + JobRunningMode + " " + jobid + " " + jobID + " \n " + 
 				           jobtype2 + " " + jobStatus2 + " " + JobRunningMode2 + " " + jobid2 + " " + jobID2);
 

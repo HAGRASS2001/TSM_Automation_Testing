@@ -39,7 +39,7 @@ public class AddbundleOnlyNG {
 	private String jobid = "";
 
   @Test
-  public void f() throws InterruptedException, JsonMappingException, JsonProcessingException {
+  public void AddbundleOnlyNG() throws InterruptedException, JsonMappingException, JsonProcessingException {
 		LoginNG login = new LoginNG(driver);
 
 		// update balance and bundle in sim plan 123
@@ -173,7 +173,7 @@ public class AddbundleOnlyNG {
 
   @AfterMethod
   public void afterMethod() {
-      System.out.println(jobname + " " + jobtype + " " + jobStatus + " " + JobRunningMode + " " + jobid + " " + jobID);
+      System.out.println( "AB O" + jobname + " " + jobtype + " " + jobStatus + " " + JobRunningMode + " " + jobid + " " + jobID);
 		
       if(jobname.equals("bundle_recredit") & (jobtype.equals("12") & jobStatus.equals("3") & JobRunningMode.equals("2"))) {
 			System.out.println("Pass");
