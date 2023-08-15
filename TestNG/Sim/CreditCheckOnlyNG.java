@@ -48,7 +48,7 @@ public class CreditCheckOnlyNG {
 		// update balance and bundle in sim plan 123
 		UpdatePlan123NG UpdatePlan123 = new UpdatePlan123NG(driver, 600, 500);
 		UpdatePlan123.UpdatePlan123();
-
+		Thread.sleep(2000);
 		// click on sim in left nav bar
 		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[1]/div[2]/div/div/div[1]/a")).click();
 		// click on tableview
@@ -119,7 +119,7 @@ public class CreditCheckOnlyNG {
 		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[1]/div[2]/div/div/div[6]/a")).click();
 		// click on show data
 		driver.findElement(By.xpath(
-				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[5]/button"))
+				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[2]/td[5]/button"))
 				.click();
 
 		// get json from simlog
@@ -161,8 +161,10 @@ public class CreditCheckOnlyNG {
 			}
 			driver.findElement(By.cssSelector("body")).click();
 			driver.findElement(By.cssSelector(".MuiMenuItem-root:nth-child(1)")).click();
-    	    driver.findElement(By.xpath("//*[@id=\"jobs-filters_order\"]")).click();
-    	    driver.findElement(By.xpath("/html/body/div[2]/div[3]/ul/li[1]")).click();
+			driver.findElement(By.cssSelector(".MuiTableRow-root:nth-child(2) .jss28")).getText();
+			Thread.sleep(10000);
+			driver.findElement(By.xpath("//*[@id=\"jobs-filters_order\"]")).click();
+			driver.findElement(By.xpath("/html/body/div[2]/div[3]/ul/li[1]")).click();
 		} catch (Exception e) {
 			System.out.println("Error: " + e.getMessage());
 		}
@@ -219,7 +221,7 @@ public class CreditCheckOnlyNG {
 		proxy.setSocksProxy("127.0.0.1:8080");
 		proxy.setSocksVersion(5);
 		options.setProxy(proxy);
-		options.setHeadless(true);
+		// options.setHeadless(true);
 		driver = new FirefoxDriver(options);
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -228,8 +230,8 @@ public class CreditCheckOnlyNG {
 
 	@AfterMethod
 	public void afterMethod() {
-		System.out.println(BundleBalance + Balance + balanceFromJson + BundleBalanceFromJson + jobtype + jobStatus
-				+ JobRunningMode + jobID + simID);
+		System.out.println(BundleBalance + " " + Balance + " " + balanceFromJson + " " + BundleBalanceFromJson + " "
+				+ jobtype + " " + jobStatus + " " + JobRunningMode + " " + jobID + " " + simID + " " + jobid + " " + Simid);
 		// check if the IMEI and IMSI same as the input
 		if (!BundleBalance.equals("400") & !Balance.equals("500") & !balanceFromJson.equals("500")
 				& !BundleBalanceFromJson.equals("400")

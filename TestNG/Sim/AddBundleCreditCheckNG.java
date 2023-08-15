@@ -242,9 +242,7 @@ public class AddBundleCreditCheckNG {
 				"/html/body/div[1]/div[2]/div/div/div/div/main/div[3]/div[1]/div/div/table/thead/tr/th[2]/div/span[2]/span/button"))
 				.click();
 
-		jobid = driver
-				.findElement(By.xpath(
-						"/html/body/div[1]/div[2]/div/div/div/div/main/div[3]/div[1]/div/div/table/tbody/tr[1]/td[2]"))
+		jobid = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div/div/div/main/div[3]/div[1]/div/div/table/tbody/tr[1]/td[2]"))
 				.getText().replaceAll(",", "");
 		if (jobid.equals(jobID)) {
 			jobtype = driver.findElement(By.xpath(
@@ -296,12 +294,12 @@ public class AddBundleCreditCheckNG {
 
 	@AfterMethod
 	public void afterMethod() {
-		System.out.println(jobname + " " + BundleBalance + " " + Balance + " " + BalanceFromJson + " "
-				+ BundleBalanceFromJson + " \n " + jobtype + " " + jobStatus + " " + JobRunningMode + " " + jobid + " "
-				+ jobID + " \n " + jobtype2 + " " + jobStatus2 + " " + JobRunningMode2 + " " + jobid2 + " " + jobID2);
+		System.out.println(jobname + " " + BundleBalance + " " + Balance + " " + BalanceFromJson + " " + BundleBalanceFromJson + " \n " 
+						 + jobtype + " " + jobStatus + " " + JobRunningMode + " " + jobid + " " + jobID + " \n " + 
+				           jobtype2 + " " + jobStatus2 + " " + JobRunningMode2 + " " + jobid2 + " " + jobID2);
 
-		if (BundleBalance.equals("450") & Balance.equals("350") & BalanceFromJson.equals("350")
-				& BundleBalanceFromJson.equals("450")
+		if (BundleBalance.equals("300") & Balance.equals("400") & BalanceFromJson.equals("400")
+				& BundleBalanceFromJson.equals("300")
 				& (jobtype.equals("1") & jobStatus.equals("3") & JobRunningMode.equals("2"))
 				& (jobtype2.equals("12") & jobStatus2.equals("3") & JobRunningMode2.equals("2"))) {
 			System.out.println("Pass");

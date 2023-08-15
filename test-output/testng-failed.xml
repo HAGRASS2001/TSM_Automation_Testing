@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Sim.CreditCheck_SimPlanNG">
+      <class name="Sim.CreditCheckOnlyNG">
         <methods>
-          <include name="afterMethod"/>
-          <include name="CreditCheck_SimPlanNG"/>
+          <include name="CreditCheckOnlyNG"/>
           <include name="beforeMethod"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- Sim.CreditCheck_SimPlanNG -->
+      </class> <!-- Sim.CreditCheckOnlyNG -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
