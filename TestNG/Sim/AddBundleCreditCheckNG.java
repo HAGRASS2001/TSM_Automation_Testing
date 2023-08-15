@@ -209,8 +209,10 @@ public class AddBundleCreditCheckNG {
 			}
 			driver.findElement(By.cssSelector("body")).click();
 			driver.findElement(By.cssSelector(".MuiMenuItem-root:nth-child(1)")).click();
-			Thread.sleep(3000);
+			driver.findElement(By.cssSelector(".MuiTableRow-root:nth-child(2) .jss28")).getText();
+			Thread.sleep(10000);
 			driver.findElement(By.xpath("//*[@id=\"jobs-filters_order\"]")).click();
+			Thread.sleep(1000);
 			driver.findElement(By.xpath("/html/body/div[2]/div[3]/ul/li[1]")).click();
 		} catch (Exception e) {
 			System.out.println("Error: " + e.getMessage());
