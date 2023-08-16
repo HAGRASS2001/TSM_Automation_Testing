@@ -199,6 +199,7 @@ public class ReCreditOnlyNG {
 		if(Balance == (Balance2 + 7) & balanceFromJson == (Balance) & (jobtype.equals("2") & jobStatus.equals("3") & JobRunningMode.equals("2"))) {
 			System.out.println("Pass");
 		}else {
+		    System.out.println(Balance + " " + Balance2 + " " + balanceFromJson + " " + jobtype + " " + jobStatus + " " + JobRunningMode + " " + jobID + " " + simID + "--------------" + jobid + " " + Simid);
 			System.out.println("Fail");
 			throw new AssertionError("Condition not true. Test failed.");
 		}

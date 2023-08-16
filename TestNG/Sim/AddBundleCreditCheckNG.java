@@ -219,7 +219,7 @@ public class AddBundleCreditCheckNG {
 		} catch (Exception e) {
 			System.out.println("Error: " + e.getMessage());
 		}
-
+		Thread.sleep(5000);
 		// get the json for first job
 		String jobMonitorJson = driver
 				.findElement(By.xpath("/html/body/div/div/main/div[4]/div[2]/table/tbody/tr[2]/td/div/pre")).getText();
