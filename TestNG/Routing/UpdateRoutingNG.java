@@ -34,7 +34,7 @@ public class UpdateRoutingNG {
 		//clear the old value
 		driver.findElement(By.xpath("//*[@id=\"routings-prefix\"]")).clear();
 		//enter the new value
-		driver.findElement(By.xpath("//*[@id=\"routings-prefix\"]")).sendKeys("test2011011");
+		driver.findElement(By.xpath("//*[@id=\"routings-prefix\"]")).sendKeys("test201010011");
 		//click on save
 		driver.findElement(By.xpath("//*[@id=\"routings-save_tms_entity\"]")).click();
 		//click on ok
@@ -65,7 +65,7 @@ public class UpdateRoutingNG {
 		//get Prefix
 		String Prefix = driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[2]")).getText();
 
-		if(Prefix.equals("test2011011")) {
+		if(Prefix.equals("test201010011")) {
 			System.out.println("Pass");
 		}else {
 			System.out.println("Fail");

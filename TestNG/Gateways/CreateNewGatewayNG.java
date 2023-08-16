@@ -28,12 +28,12 @@ public class CreateNewGatewayNG {
 		//click on IP on input
 		driver.findElement(By.xpath("//*[@id=\"gateways-ip\"]")).click();
 		//enter the Ip value
-		driver.findElement(By.xpath("//*[@id=\"gateways-ip\"]")).sendKeys("192.19.200.110");
+		driver.findElement(By.xpath("//*[@id=\"gateways-ip\"]")).sendKeys("192.19.200.1180");
 		
 		//click on Secondary IP on input
 		driver.findElement(By.xpath("//*[@id=\"gateways-secondary_ip\"]")).click();
 		//enter the Secondary ip value
-		driver.findElement(By.xpath("//*[@id=\"gateways-secondary_ip\"]")).sendKeys("192.19.200.220");
+		driver.findElement(By.xpath("//*[@id=\"gateways-secondary_ip\"]")).sendKeys("192.19.2020.220");
 		
 		//click on Name on input
 		driver.findElement(By.xpath("//*[@id=\"gateways-name\"]")).click();
@@ -91,7 +91,7 @@ public class CreateNewGatewayNG {
 		//get Secondary IP 
 		String SecondaryIP = driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[3]")).getText();
 
-		if(IP.equals("192.19.200.110") & SecondaryIP.equals("192.19.200.220")) {
+		if(IP.equals("192.19.200.1180") & SecondaryIP.equals("192.19.2020.220")) {
 			System.out.println("Pass");
 		}else {
 			System.out.println("Fail");

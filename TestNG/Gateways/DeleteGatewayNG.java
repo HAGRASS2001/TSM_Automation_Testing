@@ -56,7 +56,7 @@ public class DeleteGatewayNG {
 		//get Secondary IP 
 		String SecondaryIP = driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[3]")).getText();
 
-		if(IP.equals("198.100.100.111") & SecondaryIP.equals("192.19.200.220")) {
+		if(IP.equals("198.100.1900.111") & SecondaryIP.equals("192.19.2020.220")) {
 			System.out.println("Fail");
 			throw new AssertionError("Condition not true. Test failed.");
 		}else {
