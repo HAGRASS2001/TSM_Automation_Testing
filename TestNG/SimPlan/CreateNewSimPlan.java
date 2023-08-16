@@ -29,7 +29,7 @@ public class CreateNewSimPlan {
 		//select name input
 		driver.findElement(By.xpath("//*[@id=\"sim_plan-Name\"]")).click();
 		//enter the name value
-		driver.findElement(By.xpath("//*[@id=\"sim_plan-Name\"]")).sendKeys("vodatest22020");
+		driver.findElement(By.xpath("//*[@id=\"sim_plan-Name\"]")).sendKeys("vod20");
 		//click on Credit check type radio button
 		driver.findElement(By.xpath("//*[@id=\"sim_plan-CreditCheckType\"]")).click();
 		//click on Credit check running mode dropdown list
@@ -116,7 +116,7 @@ public class CreateNewSimPlan {
 		//get sim plan name
 		String SimPlanName = driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[2]")).getText();
 		
-		if(SimPlanName.equals("vodatest22020")) {
+		if(SimPlanName.equals("vod20")) {
 			System.out.println("Pass");
 		}else {
 			System.out.println("Fail");
