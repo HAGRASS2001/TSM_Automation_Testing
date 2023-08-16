@@ -233,8 +233,8 @@ public class CreditCheckOnlyNG {
 		System.out.println("CC O" + BundleBalance + " " + Balance + " " + balanceFromJson + " " + BundleBalanceFromJson + " "
 				+ jobtype + " " + jobStatus + " " + JobRunningMode + " " + jobID + " " + simID + " " + jobid + " " + Simid);
 		// check if the IMEI and IMSI same as the input
-		if (!BundleBalance.equals("400") & !Balance.equals("500") & !balanceFromJson.equals("500")
-				& !BundleBalanceFromJson.equals("400")
+		if (BundleBalance.equals("500") & Balance.equals("600") & balanceFromJson.equals("600")
+				& BundleBalanceFromJson.equals("500")
 				& (jobtype.equals("1") & jobStatus.equals("3") & JobRunningMode.equals("2"))) {
 			System.out.println("Pass");
 		} else {
