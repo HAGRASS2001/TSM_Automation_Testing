@@ -58,7 +58,8 @@ public class DeleteRoutingNG {
 	}
 
 	@AfterMethod
-	public void afterMethod() {
+	public void afterMethod() throws InterruptedException {
+		Thread.sleep(2000);
 		// get Prefix
 		String Prefix = driver.findElement(By.xpath(
 				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[2]"))
