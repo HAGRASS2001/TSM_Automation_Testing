@@ -190,6 +190,8 @@ public class AddBundleCreditCheckNG {
 				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[12]"))
 				.getText();
 
+		Thread.sleep(2000);
+		
 		// job monitor
 		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[1]/div[2]/div/div/div[9]/a")).click();
 		// click on completed

@@ -142,6 +142,9 @@ public class CreditCheckOnlyNG {
 		driver.findElement(By.xpath(
 				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[2]/td[5]/div/div/div/div[3]/button"))
 				.click();
+		
+		Thread.sleep(2000);
+		
 		// job monitor
 		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[1]/div[2]/div/div/div[9]/a")).click();
 		// click on completed
