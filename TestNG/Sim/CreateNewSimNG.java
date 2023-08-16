@@ -31,15 +31,15 @@ public class CreateNewSimNG {
 		// select IMSI input
 		driver.findElement(By.xpath("//*[@id=\"sims-imsi\"]")).click();
 		// enter the IMSI value
-		driver.findElement(By.xpath("//*[@id=\"sims-imsi\"]")).sendKeys("908071100");
+		driver.findElement(By.xpath("//*[@id=\"sims-imsi\"]")).sendKeys("9080711000");
 		// select IMEI input
 		driver.findElement(By.xpath("//*[@id=\"sims-imei\"]")).click();
 		// enter the IMEI value
-		driver.findElement(By.xpath("//*[@id=\"sims-imei\"]")).sendKeys("908071100");
+		driver.findElement(By.xpath("//*[@id=\"sims-imei\"]")).sendKeys("9080711000");
 		// select Subscriber num input
 		driver.findElement(By.xpath("//*[@id=\"sims-subscriber_num\"]")).click();
 		// enter the Subscriber num value
-		driver.findElement(By.xpath("//*[@id=\"sims-subscriber_num\"]")).sendKeys("908071100");
+		driver.findElement(By.xpath("//*[@id=\"sims-subscriber_num\"]")).sendKeys("9080711000");
 		// state admin checkbox (note: to click the checkbox i should click it twice for
 		// unknown reason)
 		driver.findElement(By.xpath("//*[@id=\"sims-state_admin\"]")).click();
@@ -84,7 +84,7 @@ public class CreateNewSimNG {
 		// click on Rack Position
 		driver.findElement(By.xpath("//*[@id=\"sims-IQSIM_Value\"]")).click();
 		// enter Rack Position num value
-		driver.findElement(By.xpath("//*[@id=\"sims-IQSIM_Value\"]")).sendKeys("908071100");
+		driver.findElement(By.xpath("//*[@id=\"sims-IQSIM_Value\"]")).sendKeys("9080711000");
 
 		// click on Sim plan
 		driver.findElement(By.xpath("//*[@id=\"sims-sim_plan\"]")).click();
@@ -147,7 +147,7 @@ public class CreateNewSimNG {
 		System.out.println(IMSI);
 		
 		//check if the IMEI and IMSI same as the input
-		if(IMEI.equals("908071100") & IMSI.equals("908071100")) {
+		if(IMEI.equals("9080711000") & IMSI.equals("9080711000")) {
 			System.out.println("Pass");
 		}else {
 			System.out.println("Fail");

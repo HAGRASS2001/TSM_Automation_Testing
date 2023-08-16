@@ -63,7 +63,7 @@ public class DeleteSimPlanNG {
 				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[2]"))
 				.getText();
 
-		if (SimPlanName.equals("vodatest2200")) {
+		if (SimPlanName.equals("vodatest22200")) {
 			System.out.println("Fail");
 			throw new AssertionError("Condition not true. Test failed.");
 		} else {

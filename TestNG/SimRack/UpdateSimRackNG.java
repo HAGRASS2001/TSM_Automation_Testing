@@ -38,7 +38,7 @@ public class UpdateSimRackNG {
 		// clear old value
 		driver.findElement(By.xpath("//*[@id=\"sim-racks-ip\"]")).clear();
 		// enter new value
-		driver.findElement(By.xpath("//*[@id=\"sim-racks-ip\"]")).sendKeys("192.19.20200.1111");
+		driver.findElement(By.xpath("//*[@id=\"sim-racks-ip\"]")).sendKeys("192.66.10.111");
 		// click on save
 		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/button"))
 				.click();
@@ -72,7 +72,7 @@ public class UpdateSimRackNG {
 				"/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div[5]/div[2]/table/tbody/tr[1]/td[2]"))
 				.getText();
 
-		if (IP.equals("192.19.20200.1111")) {
+		if (IP.equals("192.66.10.111")) {
 			System.out.println("Pass");
 		} else {
 			System.out.println("Fail");
