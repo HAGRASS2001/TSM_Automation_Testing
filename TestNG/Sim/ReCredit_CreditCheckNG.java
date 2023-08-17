@@ -209,11 +209,11 @@ public class ReCredit_CreditCheckNG {
 		// *************************************************************
 
 		// job monitor
+		// job monitor
+		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[1]/div[2]/div/div/div[9]/a")).click();
+		// sleep 10 sec.
+		Thread.sleep(5000);
 		try {
-			// job monitor
-			driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[1]/div[2]/div/div/div[9]/a")).click();
-			// sleep 10 sec.
-			Thread.sleep(10000);
 			driver.findElement(By.linkText("Jobs Monitor")).click();
 			driver.switchTo().frame(0);
 			driver.findElement(By.cssSelector(".MuiButtonBase-root:nth-child(3) > .MuiChip-label")).click();
@@ -229,7 +229,7 @@ public class ReCredit_CreditCheckNG {
 			}
 			driver.findElement(By.cssSelector("body")).click();
 			driver.findElement(By.cssSelector(".MuiMenuItem-root:nth-child(1)")).click();
-			//driver.findElement(By.cssSelector(".MuiTableRow-root:nth-child(2) .jss28")).getText();
+			driver.findElement(By.cssSelector(".MuiTableRow-root:nth-child(2) .jss28")).getText();
 			Thread.sleep(10000);
 			driver.findElement(By.xpath("//*[@id=\"jobs-filters_order\"]")).click();
 			Thread.sleep(1000);
