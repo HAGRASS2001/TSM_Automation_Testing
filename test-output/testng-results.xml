@@ -2,24 +2,65 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-17T12:33:13 EET" name="Default suite" finished-at="2023-08-17T12:33:33 EET" duration-ms="19644">
+  <suite started-at="2023-08-17T14:41:46 EET" name="Default suite" finished-at="2023-08-17T14:45:37 EET" duration-ms="231115">
     <groups>
     </groups>
-    <test started-at="2023-08-17T12:33:13 EET" name="Default test" finished-at="2023-08-17T12:33:33 EET" duration-ms="19644">
-      <class name="Sim.SendUSSDNG">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Sim.SendUSSDNG@708f5957]" started-at="2023-08-17T12:33:13 EET" name="beforeMethod" finished-at="2023-08-17T12:33:16 EET" duration-ms="2671" status="PASS">
+    <test started-at="2023-08-17T14:41:46 EET" name="Default test" finished-at="2023-08-17T14:45:37 EET" duration-ms="231115">
+      <class name="Sim.AddBundleCreditCheckNG">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Sim.AddBundleCreditCheckNG@67f639d3]" started-at="2023-08-17T14:41:46 EET" name="beforeMethod" finished-at="2023-08-17T14:41:50 EET" duration-ms="3365" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="SendUSSDNG()[pri:0, instance:Sim.SendUSSDNG@708f5957]" started-at="2023-08-17T12:33:16 EET" name="SendUSSDNG" finished-at="2023-08-17T12:33:32 EET" duration-ms="16765" status="PASS">
+        <test-method signature="AddBundleCreditCheckNG()[pri:0, instance:Sim.AddBundleCreditCheckNG@67f639d3]" started-at="2023-08-17T14:41:50 EET" name="AddBundleCreditCheckNG" finished-at="2023-08-17T14:45:37 EET" duration-ms="227709" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SendUSSDNG -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Sim.SendUSSDNG@708f5957]" started-at="2023-08-17T12:33:32 EET" name="afterMethod" finished-at="2023-08-17T12:33:33 EET" duration-ms="175" status="PASS">
+        </test-method> <!-- AddBundleCreditCheckNG -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Sim.AddBundleCreditCheckNG@67f639d3]" started-at="2023-08-17T14:45:37 EET" name="afterMethod" finished-at="2023-08-17T14:45:37 EET" duration-ms="1" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Condition not true. Test failed.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Condition not true. Test failed.
+at Sim.AddBundleCreditCheckNG.afterMethod(AddBundleCreditCheckNG.java:312)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:676)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:660)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- Sim.SendUSSDNG -->
+      </class> <!-- Sim.AddBundleCreditCheckNG -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

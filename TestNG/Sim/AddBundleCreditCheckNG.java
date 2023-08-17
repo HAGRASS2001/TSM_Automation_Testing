@@ -194,6 +194,7 @@ public class AddBundleCreditCheckNG {
 		
 		// job monitor
 		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[1]/div[2]/div/div/div[9]/a")).click();
+		Thread.sleep(5);
 		// click on completed
 		try {
 			driver.findElement(By.linkText("Jobs Monitor")).click();
@@ -289,7 +290,7 @@ public class AddBundleCreditCheckNG {
 		proxy.setSocksProxy("127.0.0.1:8080");
 		proxy.setSocksVersion(5);
 		options.setProxy(proxy);
-		options.setHeadless(true);
+		//options.setHeadless(true);
 		driver = new FirefoxDriver(options);
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
