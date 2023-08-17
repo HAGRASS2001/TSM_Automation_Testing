@@ -141,7 +141,7 @@ public class CreditCheck_SimPlanNG {
         	    }
         	    driver.findElement(By.cssSelector("body")).click();
         	    driver.findElement(By.cssSelector(".MuiMenuItem-root:nth-child(1)")).click();
-        	    driver.findElement(By.cssSelector(".MuiTableRow-root:nth-child(2) .jss28")).getText();
+        	    //driver.findElement(By.cssSelector(".MuiTableRow-root:nth-child(2) .jss28")).getText();
         	    driver.findElement(By.xpath("//*[@id=\"jobs-filters_order\"]")).click();
         	    driver.findElement(By.xpath("/html/body/div[2]/div[3]/ul/li[1]")).click();
 	    } catch (Exception e) {
