@@ -174,6 +174,12 @@ public class ReCreditOnlyNG {
   }
 	@BeforeMethod
 	public void beforeMethod() {
+		try {
+			Thread.sleep(60000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		System.setProperty("webdriver.gecko.driver", "D:\\geckodriver-v0.33.0-win64\\geckodriver.exe");
 
 		FirefoxOptions options = new FirefoxOptions();
