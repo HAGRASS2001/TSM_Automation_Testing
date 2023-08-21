@@ -102,7 +102,7 @@ public class CreditCheckOnlyNG {
 		driver.findElement(By.xpath("/html/body/div[4]/div/div[4]/div/button")).click();
 
 		// wait 1 min to see the record in sim logs
-		Thread.sleep(180000);
+		Thread.sleep(120000);
 
 		// click on refresh
 		driver.findElement(By.xpath("//*[@id=\"forceRefresh\"]")).click();
