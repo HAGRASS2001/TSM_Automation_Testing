@@ -7,8 +7,8 @@
       <class name="Sim.AddbundleOnlyNG"/>
       <class name="Sim.CreditCheckOnlyNG"/>
       <class name="Sim.ReCreditOnlyNG"/>
-      <class name="Sim.CreditCheck_SimPlanNG"/>   
       <class name="Sim.SendUSSDNG"/>
+      <class name="Sim.CreditCheck_SimPlanNG"/>   
       <class name="Sim.ReCredit_CreditCheckNG"/>
     </classes>
   </test> <!-- Test -->

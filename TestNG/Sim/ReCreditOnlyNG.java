@@ -130,7 +130,7 @@ public class ReCreditOnlyNG {
       	    }        	    
 			driver.findElement(By.cssSelector("body")).click();
 			driver.findElement(By.cssSelector(".MuiMenuItem-root:nth-child(1)")).click();
-			//driver.findElement(By.cssSelector(".MuiTableRow-root:nth-child(2) .jss28")).getText();
+			driver.findElement(By.cssSelector(".MuiTableRow-root:nth-child(2) .jss28")).getText();
 			Thread.sleep(10000);
 			driver.findElement(By.xpath("//*[@id=\"jobs-filters_order\"]")).click();
 			Thread.sleep(1000);
